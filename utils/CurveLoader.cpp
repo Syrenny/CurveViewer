@@ -1,18 +1,21 @@
 #include "CurveLoader.h"
 
+#include <QDebug>
 #include <QFile>
 #include <QTextStream>
 
-QVector<QPointF> CurveLoader::loadFromFile(const QString& filename) {
+QVector<QPointF> CurveLoader::loadFromFile(const QString &filename) {
     QVector<QPointF> points;
     QFile file(filename);
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qDebug() << "Error while opening the file";
         return points;
+    }
 
     QTextStream in(&file);
     while (!in.atEnd()) {
         QString line = in.readLine();
-        auto parts   = line.split('\t');
+        auto parts = line.split('\t');
         if (parts.size() >= 2)
             points.append(QPointF(parts[0].toDouble(), parts[1].toDouble()));
     }

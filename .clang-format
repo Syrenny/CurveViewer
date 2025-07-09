@@ -1,40 +1,73 @@
+---
+Language: Cpp
 BasedOnStyle: LLVM
-
 AccessModifierOffset: -4
-AlignAfterOpenBracket: Align
-AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveAssignments: false
 AlignConsecutiveBitFields: Consecutive
-AlignEscapedNewlines: Right
-AlignOperands: AlignAfterOperator
-AlignTrailingComments: true
+AlignConsecutiveDeclarations: false
+AlignOperands: true
+AlignTrailingComments: false
+AllowShortFunctionsOnASingleLine: true
 AllowAllArgumentsOnNextLine: true
 AllowAllParametersOfDeclarationOnNextLine: true
-AllowShortFunctionsOnASingleLine: true
-AllowShortLambdasOnASingleLine: All
+AlwaysBreakTemplateDeclarations: Yes
 BinPackArguments: false
 BinPackParameters: false
-BreakInheritanceList: BeforeColon
-BreakBeforeBraces: Attach
-EmptyLineAfterAccessModifier: Never
-EmptyLineBeforeAccessModifier: Always
-IndentAccessModifiers: false
-IndentWrappedFunctionNames: false
-InsertTrailingCommas: Wrapped
-KeepEmptyLinesAtTheStartOfBlocks: false
-MaxEmptyLinesToKeep: 1
-PackConstructorInitializers: NextLine
-
-PenaltyIndentedWhitespace: 2
+BraceWrapping:
+  AfterCaseLabel: false
+  AfterClass: false
+  AfterControlStatement: false
+  AfterEnum: false
+  AfterFunction: false
+  AfterNamespace: false
+  AfterStruct: false
+  AfterUnion: false
+  AfterExternBlock: false
+  BeforeCatch: false
+  BeforeElse: false
+  BeforeLambdaBody: false
+  BeforeWhile: false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+BreakBeforeBraces: Custom
+BreakConstructorInitializers: AfterColon
+BreakConstructorInitializersBeforeComma: false
+ColumnLimit: 80
+ConstructorInitializerAllOnOneLineOrOnePerLine: false
+ContinuationIndentWidth: 8
+IncludeCategories:
+  - Regex: '^<.*'
+    Priority: 1
+  - Regex: '^".*'
+    Priority: 2
+  - Regex: '.*'
+    Priority: 3
+SortIncludes: true
+IncludeIsMainRegex: '([-_](test|unittest))?$'
+IndentCaseLabels: true
 IndentWidth: 4
+InsertNewlineAtEOF: true
+InsertTrailingCommas: None
+KeepEmptyLinesAtTheStartOfBlocks: false
+MacroBlockBegin: ''
+MacroBlockEnd: ''
+MaxEmptyLinesToKeep: 1
+NamespaceIndentation: All
+PackConstructorInitializers: NextLine
+PenaltyIndentedWhitespace: 2
+SpaceAfterCStyleCast: true
+SpaceAfterTemplateKeyword: false
+SpaceBeforeRangeBasedForLoopColon: false
+SpaceInEmptyParentheses: false
+SpacesInAngles: false
+SpacesInConditionalStatement: false
+SpacesInCStyleCastParentheses: false
+SpacesInParentheses: false
+Standard: c++17
 TabWidth: 4
 UseTab: Never
+SpacesInSquareBrackets: false
 
-Standard: c++17
-SpacesInAngles: Leave
-
-AlwaysBreakTemplateDeclarations: true
-PointerAlignment: Left
-
-IndentPPDirectives: AfterHash
-
-ColumnLimit: 120
+ReflowComments: true
+...
